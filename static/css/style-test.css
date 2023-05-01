@@ -1,0 +1,177 @@
+/* clear all styles */
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* end clear all styles */
+
+@font-face {
+font-family: Pompadur; /* Гарнитура шрифта */
+src: url(fonts/Sigmar-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+* {
+font-family: Sigmar-Regular;
+}
+
+/* header */
+
+.header {
+    background-color: #fcb42d; /* 252 180 45 */
+    padding: 10px;
+}
+
+.taxi-logo {
+    height:100px;
+    width: 200px !important;
+    float: right;
+}
+
+.line {
+    background: repeating-linear-gradient(
+    to right,
+    #fff 0 20px,
+    #000 20px 40px
+    );
+    height: 20px;
+}
+
+.line-reverse{
+    background: repeating-linear-gradient(
+    to right,
+    #000 0 20px,
+    #fff 20px 40px
+    );
+    height: 20px;
+}
+
+.header-phone-block {
+    text-align: center;
+}
+
+.header-phone {
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    margin: 5px;
+}
+
+.header-phone-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header-phone-icon {
+        display: block;
+    }
+
+    .header-phone {
+        display: none !important;
+    }
+}
+
+/* end header */
+
+/* content */
+.main-info {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.block-with-infos {
+    margin: 40px 0;
+}
+
+.block-info {
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+}
+
+.block-yellow {
+    background-color: rgba(255, 255, 0, 0.3);
+}
+
+.block-grey {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.second-info {
+    background-color: rgba(255, 255, 0, 0.1);
+    padding: 20px;
+}
+
+/* end content */

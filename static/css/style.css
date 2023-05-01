@@ -1,0 +1,267 @@
+/* clear all styles */
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* end clear all styles */
+
+/* setting all site */
+@font-face {
+font-family: Pompadur; /* Гарнитура шрифта */
+src: url(fonts/Sigmar-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+* {
+font-family: Sigmar-Regular;
+}
+
+/* end setting all site */
+
+/* header */
+header {
+    width: 100wh;
+    height: 100vh;
+}
+
+.header-bg {
+    background-image: url("../images/bg-header.jpg");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment:fixed;
+}
+
+.header-menu {
+    padding: 20px;
+}
+
+.btn-header-link {
+     display: flex;
+}
+
+.btn-header-link a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-header-link span{
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.btn-header-link a:hover {
+    color: #fcb42d;
+    transition: 0.4s;
+}
+
+.block-header-phones {
+
+}
+
+.header-phone {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.header-phone img {
+    display: inline-block;
+}
+
+.header-phone:hover {
+    color: #fcb42d;
+    transition: 0.4s;
+}
+
+.header-img {
+    background-size: 100% 100%;
+}
+
+.header-img img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+.line {
+    background: repeating-linear-gradient(
+    to right,
+    #fff 0 20px,
+    #000 20px 40px
+    );
+    height: 20px;
+}
+
+.line-reverse{
+    background: repeating-linear-gradient(
+    to right,
+    #000 0 20px,
+    #fff 20px 40px
+    );
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .header-phone span {
+        display: none;
+    }
+
+    .btn-header-link span{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn-header-link span{
+        margin-bottom: 0;
+    }
+}
+
+.header-info-block {
+    padding: 40px;
+    color: white;
+}
+
+.header-form-item {
+    margin: 5px;
+}
+
+.btn-header-form:hover {
+
+}
+
+.block-info-form {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* end header */
+
+/* content block */
+.bg-yellow {
+    background-color: rgba(252, 180, 45, 0.1);
+}
+
+.bg-yellow h2 {
+
+    text-align: center;
+    padding: 40px;
+}
+
+.our-advantages {
+    padding-bottom: 140px;
+}
+
+.our-advantages-item {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.advantages-img {
+    margin: auto;
+    width: 190px;
+    height: 190px;
+}
+
+.advantages-img img {
+    top: 0;
+    width: 190px;
+    height: 190px;
+    max-width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.adventages-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+    color: #fcb42d; 252 180 45
+
+/* end content block */
