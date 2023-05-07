@@ -126,6 +126,11 @@ header {
      text-align: center;
 }
 
+.btn-header-link  img {
+    max-height: 70px;
+    margin: 0 auto;
+}
+
 .btn-header-link a {
     font-size: 20px;
     color: white;
