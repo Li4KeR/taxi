@@ -106,12 +106,24 @@ header {
     background-attachment:fixed;
 }
 
+#main_menu {
+    width: 100%;
+    position: fixed;
+    background: black
+}
+
 .header-menu {
     padding: 20px;
 }
 
+.scrollHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .btn-header-link {
-     display: flex;
+     text-align: center;
 }
 
 .btn-header-link a {
@@ -179,25 +191,8 @@ header {
     height: 20px;
 }
 
-@media (max-width: 768px) {
-    .header-phone span {
-        display: none;
-    }
-
-    .btn-header-link span{
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 400px) {
-    .btn-header-link span{
-        margin-bottom: 0;
-    }
-}
-
 .header-info-block {
-    padding: 40px;
+    padding-top: 240px;
     color: white;
 }
 
@@ -214,6 +209,21 @@ header {
     color: black;
     border-radius: 10px;
     padding: 10px;
+}
+
+.header-menu-scroll {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fcb42d;
+}
+
+.header-menu-scroll a:hover {
+    color: black;
+}
+
+.header-menu-scroll img {
+    display: none;
 }
 
 /* end header */
@@ -264,4 +274,104 @@ header {
 
     color: #fcb42d; 252 180 45
 
+
+.about-us {
+    padding: 40px;
+    margin: 40px;
+}
+
+.about-us h2 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.about-us {
+    padding-bottom: 40px;
+}
+
+.about-us p {
+    font-size: 18px;
+}
+
+.about-us img {
+    max-height: 400px;
+}
+
+.about-block {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.about-item-text {
+    border-bottom: 3px solid #fcb42d;
+    padding: 1px;
+    height: 100%;
+}
+
+.about-item span{
+    color: #fcb42d;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.about-item p{
+    font-size: 30px;
+}
+
 /* end content block */
+
+/* footer */
+
+.footer-info {
+    padding: 20px 0;
+}
+
+.footer-copyright {
+    color: white;
+    font-size: 15px;
+}
+
+.footer-docs a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-docs a:hover{
+    color: #fcb42d;
+    transition: 0.4s;
+}
+
+/* end footer */
+
+
+/* media */
+
+/* header */
+@media (max-width: 768px) {
+    .header-phone span {
+        display: none;
+    }
+
+    .btn-header-link span{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn-header-link span{
+        margin-bottom: 0;
+    }
+}
+/* end header */
+
+/* about-us */
+@media (max-width: 991px) {
+    .about-us img {
+        display: none;
+    }
+}
+/* end about-us */
+
+/* end media */

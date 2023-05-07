@@ -11,36 +11,64 @@
         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
 
+
+<body>
     <header>
+<!--        <div class="header-menu-scroll">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="btn-header-link col-sm-3 col-4">-->
+<!--                        <a href="#">CARETA.RU</a>-->
+<!--                    </div>-->
+<!--                    <div class="block-header-phones col-sm-5 col-2">-->
+<!--                        <a class="header-phone" href="tel:+7999">-->
+<!--                            <img src="images/phone.png" alt="">-->
+<!--                            <span>+7(999)999-99-99</span>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-4 col-6">-->
+<!--                        <div class="header-img">-->
+<!--                            <img src="images/taxi-test.png" alt="">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
         <div class="header-bg">
-            <div class="container">
-                <div class="header-menu">
-                    <div class="row">
-                        <div class="btn-header-link col-sm-3 col-4">
-                            <a href="#">TAXI <br/><span>CARETA.RU</span></a>
-                        </div>
-                        <div class="block-header-phones col-sm-5 col-2">
-                            <a class="header-phone" href="tel:+7999">
-                                <img src="{{ url_for('static', filename='images/phone.png') }}" alt="phone">
-                                <span>+7(999)999-99-99</span>
-                            </a> <br>
-                            <a class="header-phone" href="tel:+7999">
-                                <img src="{{ url_for('static', filename='images/phone.png') }}" alt="phone">
-                                <span>+7(999)999-99-99</span>
-                            </a>
-                        </div>
-                        <div class="col-sm-4 col-6">
-                            <div class="header-img">
-                                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            <div id="main_menu" >
+                <div class="container">
+                    <div class="header-menu">
+                        <div class="row">
+                            <div class="btn-header-link col-sm-3 col-4">
+                                <a href="#"><img src="{ url_for('static', filename='images/logo.png') }}" alt=""></a>
+                                <a href="#">CARETA.RU</a>
+    <!--                            <a href="#">TAXI <br/><span>CARETA.RU</span></a>-->
+                            </div>
+                            <div class="block-header-phones col-sm-5 col-2">
+                                <a class="header-phone" href="tel:+7999">
+                                    <img src="{{ url_for('static', filename='images/phone.png') }}" alt="">
+                                    <span>+7(999)999-99-99</span>
+                                </a> <br>
+                                <a class="header-phone" href="tel:+7999">
+                                    <img src="{{ url_for('static', filename='images/phone.png') }}" alt="">
+                                    <span>+7(999)999-99-99</span>
+                                </a>
+                            </div>
+                            <div class="col-sm-4 col-6">
+                                <div class="header-img">
+                                    <img src="{ url_for('static', filename='images/taxi-test.png') }}" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="line"></div>
+                <div class="line-reverse"></div>
             </div>
-            <div class="line"></div>
-            <div class="line-reverse"></div>
+
+
 
             <div class="header-info-block">
                 <div class="container">
@@ -86,7 +114,7 @@
 
                         <div class="our-advantages-item col-lg-4 col-12">
                             <div class="advantages-img">
-                                <img src="{{ url_for('static', filename='images/card.png') }}" alt="card">
+                                <img src="{{ url_for('static', filename='images/card.png') }}" alt="">
                             </div>
                             <div class="adventages-text">
                                 <p>Оплата банковскими картами</p>
@@ -95,7 +123,7 @@
 
                         <div class="our-advantages-item col-lg-4 col-12">
                             <div class="advantages-img">
-                                <img src="{{ url_for('static', filename='images/car.png') }}" alt="relax">
+                                <img src="{{ url_for('static', filename='images/car.png') }}" alt="">
                             </div>
                             <div class="adventages-text">
                                 <p>Комфортная поездка</p>
@@ -104,7 +132,7 @@
 
                         <div class="our-advantages-item col-lg-4 col-12">
                             <div class="advantages-img">
-                                <img src="{{ url_for('static', filename='images/clock.png') }}" alt="clock">
+                                <img src="{{ url_for('static', filename='images/clock.png') }}" alt="">
                             </div>
                             <div class="adventages-text">
                                 <p>Быстрая подача такси</p>
@@ -113,13 +141,96 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <div class="bg-light">
+            <div class="container">
+                <div class="about-us">
+                    <h2>О нас</h2>
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <p>
+                                Компания Такси Ритм работает на рынке пассажирских перевозок Москвы вот уже более 17 лет. За это время мы смогли заслужить доверие и уважение среди пассажиров и водителей. Подтверждением тому является большое количество положительных оценок и отзывов, за которые мы глубоко всем благодарны.
+
+                                Наша компания специализируется на обслуживании корпоративных клиентов, помогая им быстро, удобно и безопасно перевозить по городу сотрудников и руководящий состав. Помимо этого, мы предоставляем свои услуги частным заказчикам.
+
+                                Такси Ритм гарантирует профессиональный и строгий подход к отбору водителей, что позволяет обеспечить пассажирам спокойные и комфортные поездки. Вместе с тем, мы выстраиваем человеческие отношения с водителями и создаем комфортные условия труда и заработка, что делает наше сотрудничество поистине взаимовыгодным. Водители компании с завидным постоянством становятся призерами городских конкурсов на звание “Лучший водитель такси” и получают почетные грамоты от администрации г. Москвы.
+
+                                Такси Ритм - это один из крупнейших таксопарков в Москве, который ценит каждого клиента, водителя и сотрудника.
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ url_for('static', filename='images/img-about.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="about-block">
+                        <div class="row">
+                            <div class="about-item col-md-3 col-6">
+                                <div class="about-item-text">
+                                    <span>20</span>
+                                    <p>автомобилей</p>
+                                </div>
+                            </div>
+                            <div class="about-item col-md-3 col-6">
+                                <div class="about-item-text">
+                                    <span>200+</span>
+                                    <p>ежедневных клиентов</p>
+                                </div>
+                            </div>
+                            <div class="about-item col-md-3 col-6">
+                                <div class="about-item-text">
+                                    <span>1500+</span>
+                                    <p>килмоетров в день</p>
+                                </div>
+                            </div>
+                            <div class="about-item col-md-3 col-6">
+                                <div class="about-item-text">
+                                    <span>1000</span>
+                                    <p>чего-нибудь</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </content>
 
     <footer>
-
+        <div class="bg-dark">
+            <div class="container">
+                <div class="footer-info">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="footer-copyright">
+                                <span>2023 CARETA.RU</span>
+                                <p>(с)Все права Защищены</p>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="footer-docs">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a href="#">Политика конфиденциальности</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="#">Оферта транспортных услуг</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="#">Условия пользования</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="#">Агентский договор</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
