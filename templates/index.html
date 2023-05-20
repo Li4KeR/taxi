@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="btn-header-link col-sm-3 col-4">
                                 <a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a>
-                                <a href="#">CARETA.RU</a>
+                                <a href="#">CARETA</a>
     <!--                            <a href="#">TAXI <br/><span>CARETA.RU</span></a>-->
                             </div>
                             <div class="block-header-phones col-sm-5 col-2">
@@ -76,25 +76,27 @@
                     <div class="feedback-order-block">
                         <div class="row d-flex justify-content-between">
                             <div class="col-md-5 col-12">
-                                <form>
+                                <form action="/", method="POST">
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Откуда-куда</label>
-                                        <input class="form-control header-form-item" type="text" placeholder="Откуда забрать">
-                                        <input class="form-control header-form-item" type="text" placeholder="Место назначения">
+                                        <label>Откуда-куда</label>
+                                        <input class="form-control header-form-item" name="from" type="text" placeholder="Откуда забрать">
+                                          <button class="btn btn-warning" onclick="getLocation()">my_geo</button>
+                                          <p id="myGeo"></p>
+                                        <input class="form-control header-form-item" name="where" type="text" placeholder="Место назначения">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Контакт для связи</label>
-                                        <input type="password" class="form-control header-form-item" id="exampleInputPassword1" placeholder="Телефон">
+                                        <label for="phone">Контакт для связи</label>
+                                        <input type="text" id="phone" name="phone" class="form-control header-form-item" placeholder="Телефон">
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control header-form-item">
+                                        <select class="form-control header-form-item" name="class_taxi">
                                             <option>Стандарт</option>
                                             <option>Комфорт</option>
                                             <option>Бизнес</option>
                                             <option>Быстрее</option>
                                         </select>
                                     </div>
-                                    <button type="submit" class="btn btn-warning btn-header-form">Заказать</button>  <!-- /* btn btn-primary */ -->
+                                    <button type="submit" name="btn_send_form" class="btn btn-warning btn-header-form">Заказать</button>  <!-- /* btn btn-primary */ -->
                                 </form>
                             </div>
                         </div>
@@ -151,13 +153,24 @@
                     <div class="row">
                         <div class="col-lg-8 col-12">
                             <p>
-                                Компания Такси Ритм работает на рынке пассажирских перевозок Москвы вот уже более 17 лет. За это время мы смогли заслужить доверие и уважение среди пассажиров и водителей. Подтверждением тому является большое количество положительных оценок и отзывов, за которые мы глубоко всем благодарны.
+                                Компания Такси Карета работает на рынке пассажирских перевозок вот уже более 17 лет.
+                                За это время мы смогли заслужить доверие и уважение среди пассажиров и водителей.
+                                Подтверждением тому является большое количество положительных оценок и отзывов,
+                                за которые мы глубоко всем благодарны.
 
-                                Наша компания специализируется на обслуживании корпоративных клиентов, помогая им быстро, удобно и безопасно перевозить по городу сотрудников и руководящий состав. Помимо этого, мы предоставляем свои услуги частным заказчикам.
+                                Наша компания специализируется на обслуживании корпоративных клиентов, помогая им
+                                быстро, удобно и безопасно перевозить по городу сотрудников и руководящий состав.
+                                Помимо этого, мы предоставляем свои услуги частным заказчикам.
 
-                                Такси Ритм гарантирует профессиональный и строгий подход к отбору водителей, что позволяет обеспечить пассажирам спокойные и комфортные поездки. Вместе с тем, мы выстраиваем человеческие отношения с водителями и создаем комфортные условия труда и заработка, что делает наше сотрудничество поистине взаимовыгодным. Водители компании с завидным постоянством становятся призерами городских конкурсов на звание “Лучший водитель такси” и получают почетные грамоты от администрации г. Москвы.
+                                Такси Карета гарантирует профессиональный и строгий подход к отбору водителей,
+                                что позволяет обеспечить пассажирам спокойные и комфортные поездки. Вместе с тем,
+                                мы выстраиваем человеческие отношения с водителями и создаем комфортные условия труда
+                                и заработка, что делает наше сотрудничество поистине взаимовыгодным. Водители компании
+                                с завидным постоянством становятся призерами городских конкурсов на звание
+                                “Лучший водитель такси” и получают почетные грамоты от администрации.
 
-                                Такси Ритм - это один из крупнейших таксопарков в Москве, который ценит каждого клиента, водителя и сотрудника.
+                                Такси Карета - это один из крупнейших таксопарков, который ценит каждого клиента,
+                                водителя и сотрудника.
                             </p>
                         </div>
                         <div class="col-4">
@@ -208,29 +221,32 @@
                                 <p>(с)Все права Защищены</p>
                             </div>
                         </div>
-                        <div class="col-8">
-                            <div class="footer-docs">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a href="#">Политика конфиденциальности</a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="#">Оферта транспортных услуг</a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="#">Условия пользования</a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="#">Агентский договор</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="col-8">-->
+<!--                            <div class="footer-docs">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="col-6">-->
+<!--                                        <a href="#">Политика конфиденциальности</a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-6">-->
+<!--                                        <a href="#">Оферта транспортных услуг</a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-6">-->
+<!--                                        <a href="#">Условия пользования</a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-6">-->
+<!--                                        <a href="#">Агентский договор</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.maskedinput.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/geo.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/phone.js') }}"></script>
 </body>
 </html>
