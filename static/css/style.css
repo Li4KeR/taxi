@@ -324,6 +324,20 @@ header {
     font-size: 30px;
 }
 
+.btn-send-feedback {
+    display: flex;
+}
+
+.btn-send-feedback p {
+    background-color: rgba(252, 180, 45, 0.5);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
 /* end content block */
 
 /* footer */
